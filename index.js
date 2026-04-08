@@ -1,8 +1,11 @@
 /**
  * Selects the element with the id 'main-heading' and changes its text content to 'DOM Manipulation Challenge'.
  */
+
 function changeHeadingText() {
   // TODO: Implement this function
+  let mainHeading = document.getElementById("main-heading")
+  mainHeading.textContent = "DOM Manipulation Challenge"
 }
 
 /**
@@ -10,13 +13,20 @@ function changeHeadingText() {
  */
 function changeBoxColor() {
   // TODO: Implement this function
+  const box = document.getElementById("box-to-modify")
+  box.style.backgroundColor = "lightblue"
 }
 
 /**
  * Creates a new <li> element, sets its text content to 'New Item', and appends it to the <ul> with the id 'item-list'.
  */
+
 function addNewItem() {
   // TODO: Implement this function
+  const unorderedList = document.getElementById("item-list")
+  const newli = document.createElement("li")
+  newli.textContent = "New Item"
+  unorderedList.appendChild(newli)
 }
 
 /**
@@ -24,6 +34,8 @@ function addNewItem() {
  */
 function highlightParagraph() {
   // TODO: Implement this function
+  const paragraph = document.querySelector(".content-para")
+  paragraph.setAttribute("class", "highlight")
 }
 
 /**
@@ -31,18 +43,18 @@ function highlightParagraph() {
  */
 function removeElement() {
   // TODO: Implement this function
+  const removingElements = document.querySelector("#to-be-removed")
+  removingElements.remove()
 }
-
 
 // Do not edit the lines below.
 // These lines are for testing purposes.
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        changeHeadingText,
-        changeBoxColor,
-        addNewItem,
-        highlightParagraph,
-        removeElement
-    };
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = {
+    changeHeadingText,
+    changeBoxColor,
+    addNewItem,
+    highlightParagraph,
+    removeElement,
+  }
 }
-
